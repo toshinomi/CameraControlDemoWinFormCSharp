@@ -37,6 +37,7 @@
             this.pictureBox = new System.Windows.Forms.PictureBox();
             this.btnStart = new System.Windows.Forms.Button();
             this.btnStop = new System.Windows.Forms.Button();
+            this.checkBoxImgProcOn = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -137,12 +138,23 @@
             this.btnStop.UseVisualStyleBackColor = true;
             this.btnStop.Click += new System.EventHandler(this.OnClickBtnStop);
             // 
+            // checkBoxImgProcOn
+            // 
+            this.checkBoxImgProcOn.AutoSize = true;
+            this.checkBoxImgProcOn.Location = new System.Drawing.Point(420, 71);
+            this.checkBoxImgProcOn.Name = "checkBoxImgProcOn";
+            this.checkBoxImgProcOn.Size = new System.Drawing.Size(206, 24);
+            this.checkBoxImgProcOn.TabIndex = 7;
+            this.checkBoxImgProcOn.Text = "Image Processing ON";
+            this.checkBoxImgProcOn.UseVisualStyleBackColor = true;
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(800, 600);
+            this.Controls.Add(this.checkBoxImgProcOn);
             this.Controls.Add(this.btnStop);
             this.Controls.Add(this.btnStart);
             this.Controls.Add(this.pictureBox);
@@ -159,6 +171,7 @@
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -173,6 +186,7 @@
         private System.Windows.Forms.PictureBox pictureBox;
         private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.Button btnStop;
+        private System.Windows.Forms.CheckBox checkBoxImgProcOn;
     }
 }
 
