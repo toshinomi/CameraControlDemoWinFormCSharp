@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -180,10 +181,16 @@ namespace CameraControlDemoWindowsFormCSharp
         /// </summary>
         /// <param name="sender">オブジェクト</param>
         /// <param name="eventArgs">NewFrameEventのデータ</param>
-        private void VideoRendering(object sender, NewFrameEventArgs eventArgs)
+        private async void VideoRendering(object sender, NewFrameEventArgs eventArgs)
         {
             Bitmap bitmap = (Bitmap)eventArgs.Frame.Clone();
-            pictureBox.Image = bitmap;
+
+            EdgeDetection edge = new EdgeDetection(bitmap);
+            bool bResult = await Task.Run(() => edge.GoImgProc());
+            if (bResult)
+            {
+                pictureBox.Image = edge.BitmapAfter;
+            }
 
             return;
         }
