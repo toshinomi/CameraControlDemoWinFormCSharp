@@ -38,7 +38,6 @@ public class EdgeDetection : ComImgProc
     /// <summary>
     /// エッジ検出の実行
     /// </summary>
-    /// <param name="_token">キャンセルトークン</param>
     /// <returns>実行結果 成功/失敗</returns>
     public override bool GoImgProc()
     {

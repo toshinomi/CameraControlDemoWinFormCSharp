@@ -187,11 +187,11 @@ namespace CameraControlDemoWindowsFormCSharp
 
             if (checkBoxImgProcOn.Checked == true)
             {
-                EdgeDetection edge = new EdgeDetection(bitmap);
-                bool bResult = await Task.Run(() => edge.GoImgProc());
+                EdgeDetection proc = new EdgeDetection(bitmap);
+                bool bResult = await Task.Run(() => proc.GoImgProc());
                 if (bResult)
                 {
-                    pictureBox.Image = edge.BitmapAfter;
+                    pictureBox.Image = proc.BitmapAfter;
                 }
             }
             else
